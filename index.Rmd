@@ -1,10 +1,10 @@
 ---
-title: "Estatística básica"
-author: "Renata Hirota | Vortex Media | R-Ladies | IME USP"
-date: "Coda Br - Nov/2019"
+title: "Estatística para jornalistas"
+author: "Renata Hirota | Maria Marinho"
+date: "Congresso Abraji 2020"
 output: 
   xaringan::moon_reader:
-    css: ["rladies", "rladies-fonts", "ninjutsu"]
+    css: ["rladies", "rladies-fonts", "ninjutsu", "css/extra.css"]
 ---
 
 ```{r setup, include=FALSE}
@@ -12,6 +12,39 @@ knitr::opts_chunk$set(echo = TRUE)
 library(dplyr)
 library(ggplot2)
 ```
+
+# Quem somos
+
+.pull-left[
+```{r out.width = "220", fig.align = "left", echo = FALSE}
+knitr::include_graphics("imgs/renata.jpg")
+```
+]
+
+.pull-right[
+**Renata Hirota** é jornalista de dados, formada na ECA-USP e graduanda em estatística no IME-USP. Lida com dados desde 2017 e atualmente trabalha na Associação Brasileira de Jurimetria. Colabora também com o Núcleo Jornalismo e Science Pulse, iniciativa do Volt Data Lab que visa aproximar jornalistas e cientistas. Faz parte da comunidade R-Ladies São Paulo, que promove a diversidade de gênero na comunidade da linguagem de programação R.
+
+
+`r anicon::faa("github", animate="vertical")`Github: [rmhirota](https://github.com/rmhirota)  
+`r anicon::faa("twitter", animate="float")`Twitter: [@renata_mh](https://twitter.com/renata_mh)
+]
+
+---
+# Quem somos
+
+.pull-left[
+```{r out.width = "220", fig.align = "right", echo = FALSE}
+knitr::include_graphics("imgs/maria_marinho.jpg")
+```
+]
+
+.pull-right[
+**Maria Marinho** é formada em Processamento de Dados, bacharela e licenciada em Matemática com ênfase em Informática, pós graduada em Educação Matemática. Atuou na área de TI como Desenvolvedora de Sistemas e atualmente é Cientista de Dados na SulAmérica. Faz parte das comunidades R-Ladies e PyLadies São Paulo.
+
+`r anicon::faa("github", animate="vertical")`Github: [MaryMS](https://github.com/MaryMS)
+]
+
+---
 
 # Estatística básica
 
@@ -407,5 +440,10 @@ class: inverse, middle, center
 
 # Obrigada!
 
-Me encontre no 
-[`r anicon::faa("github", animate="vertical")` Github](https://github.com/rmhirota) ou no [`r anicon::faa("twitter", animate="float")` Twitter](https://twitter.com/renata_mh)
+**Renata Hirota**
+
+`r anicon::faa("github", animate="vertical")`Github: [rmhirota](https://github.com/rmhirota) ou `r anicon::faa("twitter", animate="float")`Twitter: [@renata_mh](https://twitter.com/renata_mh)
+
+**Maria Marinho**
+
+`r anicon::faa("github", animate="vertical")`Github: [MaryMS](https://github.com/MaryMS)

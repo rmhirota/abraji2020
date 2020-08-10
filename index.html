@@ -1,27 +1,57 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="" xml:lang="">
   <head>
-    <title>Estatística básica</title>
+    <title>Estatística para jornalistas</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Renata Hirota | Vortex Media | R-Ladies | IME USP" />
-    <link href="estatistica_files/remark-css-0.0.1/rladies.css" rel="stylesheet" />
-    <link href="estatistica_files/remark-css-0.0.1/rladies-fonts.css" rel="stylesheet" />
-    <link href="estatistica_files/remark-css-0.0.1/ninjutsu.css" rel="stylesheet" />
-    <link href="estatistica_files/font-awesome-animation-1.0/font-awesome-animation-emi.css" rel="stylesheet" />
-    <script src="estatistica_files/fontawesome-5.0.13/js/fontawesome-all.min.js"></script>
+    <meta name="author" content="Renata Hirota | Maria Marinho" />
+    <link href="index_files/remark-css-0.0.1/rladies.css" rel="stylesheet" />
+    <link href="index_files/remark-css-0.0.1/rladies-fonts.css" rel="stylesheet" />
+    <link href="index_files/remark-css-0.0.1/ninjutsu.css" rel="stylesheet" />
+    <link href="index_files/font-awesome-animation-1.0/font-awesome-animation-emi.css" rel="stylesheet" />
+    <script src="index_files/fontawesome-5.0.13/js/fontawesome-all.min.js"></script>
+    <link rel="stylesheet" href="css/extra.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Estatística básica
-### Renata Hirota | Vortex Media | R-Ladies | IME USP
-### Coda Br - Nov/2019
+# Estatística para jornalistas
+### Renata Hirota | Maria Marinho
+### Congresso Abraji 2020
 
 ---
 
 
 
+
+# Quem somos
+
+.pull-left[
+&lt;img src="imgs/renata.jpg" width="220" style="display: block; margin: auto auto auto 0;" /&gt;
+]
+
+.pull-right[
+**Renata Hirota** é jornalista de dados, formada na ECA-USP e graduanda em estatística no IME-USP. Lida com dados desde 2017 e atualmente trabalha na Associação Brasileira de Jurimetria. Colabora também com o Núcleo Jornalismo e Science Pulse, iniciativa do Volt Data Lab que visa aproximar jornalistas e cientistas. Faz parte da comunidade R-Ladies São Paulo, que promove a diversidade de gênero na comunidade da linguagem de programação R.
+
+
+<span>&lt;i class="fab  fa-github faa-vertical animated "&gt;&lt;/i&gt;</span>Github: [rmhirota](https://github.com/rmhirota)  
+<span>&lt;i class="fab  fa-twitter faa-float animated "&gt;&lt;/i&gt;</span>Twitter: [@renata_mh](https://twitter.com/renata_mh)
+]
+
+---
+# Quem somos
+
+.pull-left[
+&lt;img src="imgs/maria_marinho.jpg" width="220" style="display: block; margin: auto 0 auto auto;" /&gt;
+]
+
+.pull-right[
+**Maria Marinho** é formada em Processamento de Dados, bacharela e licenciada em Matemática com ênfase em Informática, pós graduada em Educação Matemática. Atuou na área de TI como Desenvolvedora de Sistemas e atualmente é Cientista de Dados na SulAmérica. Faz parte das comunidades R-Ladies e PyLadies São Paulo.
+
+<span>&lt;i class="fab  fa-github faa-vertical animated "&gt;&lt;/i&gt;</span>Github: [MaryMS](https://github.com/MaryMS)
+]
+
+---
 
 # Estatística básica
 
@@ -167,7 +197,7 @@ background-size: contain
 ## 24     9    1
 ```
 ---
-![](estatistica_files/figure-html/unnamed-chunk-2-1.png)&lt;!-- --&gt;
+![](index_files/figure-html/unnamed-chunk-4-1.png)&lt;!-- --&gt;
 
 ```
 ## Média =  3.7125
@@ -271,7 +301,7 @@ Como o nome diz, as probabilidades são distribuídas uniformemente entre todos 
 Quando jogamos um dado, assumimos que todas as faces tem a mesma probabilidade. &lt;br&gt;&lt;br&gt;
 --
 
-&lt;img src="estatistica_files/figure-html/unnamed-chunk-3-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -282,7 +312,13 @@ A distribuição das probabilidades é mais concentrada no centro.&lt;br&gt;
 Quando consideramos a soma de dois dados, a distribuição _tende_ a ser normal. &lt;br&gt;
 Quanto mais vezes jogarmos os dados, estaremos mais próximos de uma distribuição normal teórica. &lt;br&gt;&lt;br&gt;
 --
-&lt;img src="estatistica_files/figure-html/unnamed-chunk-4-1.png" style="display: block; margin: auto;" /&gt;
+
+```
+## Warning: Continuous limits supplied to discrete scale.
+## Did you mean `limits = factor(...)` or `scale_*_continuous()`?
+```
+
+&lt;img src="index_files/figure-html/unnamed-chunk-6-1.png" style="display: block; margin: auto;" /&gt;
 ---
 # Distribuições
 
@@ -294,7 +330,7 @@ dado2 &lt;- floor(runif(10, 1, 7))
 hist(dado1+dado2)
 ```
 
-&lt;img src="estatistica_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-7-1.png" style="display: block; margin: auto;" /&gt;
 ---
 # Distribuições
 
@@ -306,7 +342,7 @@ dado2 &lt;- floor(runif(100, 1, 7))
 hist(dado1+dado2)
 ```
 
-&lt;img src="estatistica_files/figure-html/unnamed-chunk-6-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-8-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 # Distribuições
@@ -319,7 +355,7 @@ dado2 &lt;- floor(runif(10000, 1, 7))
 hist(dado1+dado2)
 ```
 
-&lt;img src="estatistica_files/figure-html/unnamed-chunk-7-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-9-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 # Distribuições
@@ -367,7 +403,7 @@ class: inverse
 - Populações diferentes
 
 
-&lt;img src="estatistica_files/figure-html/unnamed-chunk-8-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-10-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 # Inferência: população e amostra
@@ -443,8 +479,13 @@ class: inverse, middle, center
 
 # Obrigada!
 
-Me encontre no 
-[<span>&lt;i class="fab  fa-github faa-vertical animated "&gt;&lt;/i&gt;</span> Github](https://github.com/rmhirota) ou no [<span>&lt;i class="fab  fa-twitter faa-float animated "&gt;&lt;/i&gt;</span> Twitter](https://twitter.com/renata_mh)
+**Renata Hirota**
+
+<span>&lt;i class="fab  fa-github faa-vertical animated "&gt;&lt;/i&gt;</span>Github: [rmhirota](https://github.com/rmhirota) ou <span>&lt;i class="fab  fa-twitter faa-float animated "&gt;&lt;/i&gt;</span>Twitter: [@renata_mh](https://twitter.com/renata_mh)
+
+**Maria Marinho**
+
+<span>&lt;i class="fab  fa-github faa-vertical animated "&gt;&lt;/i&gt;</span>Github: [MaryMS](https://github.com/MaryMS)
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
@@ -487,9 +528,25 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     }
     deleted = true;
   });
-})();</script>
-
-<script>
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
 (function() {
   var links = document.getElementsByTagName('a');
   for (var i = 0; i < links.length; i++) {
@@ -497,8 +554,7 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
       links[i].target = '_blank';
     }
   }
-})();
-</script>
+})();</script>
 
 <script>
 slideshow._releaseMath = function(el) {
