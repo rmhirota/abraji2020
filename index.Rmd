@@ -69,11 +69,12 @@ knitr::include_graphics("imgs/maria_marinho.jpg")
 - Tipos de Gráficos
 
 --
+
 - Inferência: população e amostra
 
 --
 
-- Causalidade e falácia ecológica
+- Armadilhas com dados
 
 
 ---
