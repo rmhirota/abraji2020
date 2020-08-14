@@ -62,13 +62,11 @@ knitr::include_graphics("imgs/maria_marinho.jpg")
 
 --
 
-- Probabilidade
+- Tipos de Dados
 
 --
 
-- Distribuições
-    - Normal
-    - Uniforme
+- Tipos de Gráficos
 
 --
 - Inferência: população e amostra
