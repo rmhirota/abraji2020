@@ -48,47 +48,15 @@ knitr::include_graphics("imgs/maria_marinho.jpg")
 
 # Estatística básica
 
---
 
 - Por que é importante?
-
---
-
 - Média, mediana e moda
-
---
-
 - Porcentagem e taxas
-
---
-
 - Tipos de Dados
-
---
-
 - Tipos de Gráficos
-
---
-
 - Inferência: população e amostra
-
---
-
 - Armadilhas com dados
 
-
----
-
-# Por que é importante?
-
---
-- É fácil chegar a conclusões falsas a partir de dados reais
---
-
-- Pode mudar completamente seu lide
---
-
-- Ajuda a escrever de forma mais clara
 
 ---
 background-image: url(imgs/calvin.png)
@@ -97,45 +65,34 @@ background-size: contain
 # Por que é importante?
 
 ---
-class: inverse
+# Por que é importante?
 
-## Exemplo:
-
-A cidade X teve 50 assassinatos neste ano. A cidade Y também teve 50 assassinatos.<br>
-Há 5 anos, X teve 29 assassinatos e Y teve 42.
-
-A cidade X ficou mais perigosa que a cidade Y em comparação a 5 anos atrás?
-
---
-<br><br><br>
-**Falta informação!**
-<br><br><br>
---
-
-Neste ano, a população da cidade X é de 800 mil habitantes. Y tem 600 mil habitantes.<br>
-Há 5 anos, as populações de X e de Y eram 450 mil e 550 mil, respectivamente.
-
-Então, se considerarmos os assassinatos per capita, temos:
-- Neste ano, 6.25 assassinatos a cada 100 mil habitantes em X e 8.33 em Y
-- Há 5 anos, 6.44 assassinatos a cada 100 mil habitantes em X e 7.64 em Y
-
-
+- É fácil chegar a conclusões falsas a partir de dados reais
+- Pode mudar completamente seu lide
+- Ajuda a escrever de forma mais clara
 
 ---
+background-image: url(imgs/covid_jpeg)
 
+# Por que é importante?
 
+---
+class: inverse
+background-image: url(imgs/media_movel.png)
+
+# Média, mediana e moda
+
+---
 # Média, mediana e moda
 
 ### O que significa média?
 
 --
-cidadão médio? <br>
-
---
-salário médio? <br><br>
-
---
-Às vezes, usamos a palavra média mas queremos dizer mediana, moda...
+pessoa média?  
+salário médio?  
+  
+  
+Às vezes, usamos a palavra **média**, mas os conceitos mais adequados à situação são **mediana** ou **moda**.
 
 ---
 
@@ -148,6 +105,30 @@ salário médio? <br><br>
 **Moda**: Valor mais comum. Um conjunto de dados pode ter mais de uma moda.
 
 ---
+# Média, mediana e moda
+
+**Média móvel**: Média utilizada em séries temporais que considera uma janela "móvel" para fazer o cálculo. 
+
+```{r echo = FALSE}
+da <- data.table::fread("dados/covid_uf.csv")
+da %>% 
+  filter(state == "SP", date >= "2020-06-01") %>% 
+  mutate(ma_7 = zoo::rollmean(new_deaths, k = 7, fill = NA, align = "right")) %>% 
+  ggplot() +
+  geom_point(aes(x = date, y = new_deaths)) +
+  geom_line(aes(x = date, y = new_deaths)) +
+  geom_point(aes(x = date, y = ma_7, colour = "média móvel")) +
+  geom_line(aes(x = date, y = ma_7, colour = "média móvel")) +
+  labs(x = "data", y = "mrotes por dia", title = "Mortes por covid-19 em SP") +
+  theme_minimal() +
+  theme(legend.title = element_blank())
+
+```
+
+
+---
+
+
 background-image: url(imgs/mean.jpg)
 background-size: contain
 
