@@ -41,7 +41,8 @@ knitr::include_graphics("imgs/maria_marinho.jpg")
 .pull-right[
 **Maria Marinho** é formada em Processamento de Dados, bacharela e licenciada em Matemática com ênfase em Informática, pós graduada em Educação Matemática. Atuou na área de TI como Desenvolvedora de Sistemas e atualmente é Cientista de Dados na SulAmérica. Faz parte das comunidades R-Ladies e PyLadies São Paulo.
 
-`r anicon::faa("github", animate="vertical")`Github: [MaryMS](https://github.com/MaryMS)
+`r anicon::faa("at", animate="vertical")`Email: mariamarinhos@gmail.com
+`r anicon::faa("github", animate="float")`Github: [MaryMS](https://github.com/MaryMS)
 ]
 
 ---
@@ -191,127 +192,16 @@ Por exemplo: **_Aprovação de Bolsonaro caiu de 52% para 36%_**
 
 ---
 
-# Probabilidade
+# Tipos de Dados
 
-### Uma questão de contagem
-número de resultados de interesse dividido pelo número de resultados possíveis
---
-
-- Se eu jogar um dado, qual a probabilidade de obter um 6? E 1?
---
-<br><br>
-Resultados possíveis:   `1, 2, 3, 4, 5, 6` (total = 6)<br>
-Resultado de interesse:   `6` (total = 1) <br><br>
---
-Probabilidade de tirar um 6:   `1/6 = 0,167` <br><br>(ou, ainda, 16,7%) <br>
+background-image: url(imgs/tipos_dados.jpg)
+background-size: contain
 
 ---
-# Probabilidade 
-
-- Se eu jogar dois dados e somar, qual a probabilidade de tirar 1? E 6?<br>
---
-<br>
-Resultados possíveis para o primeiro dado: `1, 2, 3, 4, 5, 6` <br>
-Resultados possíveis para o segundo dado: `1, 2, 3, 4, 5, 6` <br><br>
---
-Somas possíveis: <br>
-Fixando 1 no primeiro dado: `2, 3, 4, 5, 6, 7` <br>
-Fixando 2 no primeiro dado: `3, 4, 5, 6, 7, 8` <br>
-Fixando 3 no primeiro dado: `4, 5, 6, 7, 8, 9` <br> 
-Fixando 4 no primeiro dado: `5, 6, 7, 8, 9, 10` <br>
-Fixando 5 no primeiro dado: `6, 7, 8, 9, 10, 11` <br>
-Fixando 6 no primeiro dado: `7, 8, 9, 10, 11, 12` <br><br>
---
-De quantas formas é possível tirar 1? __Zero__ <br>
-Logo, a probabilidade de tirar 1 é igual a 0.<br><br>
---
-De quantas formas é possível tirar 6? __5__ <br>
-Logo, a probabilidade de tirar 6 é igual a 5 dividido por 36 (número total de resultados possíveis), ou seja, 13,9%
-
-
---
-- Probabilidade é a mesma coisa que proporção? 
---
-_ Quase_
-
+# Tipos de Gráficos
 
 ---
-# Distribuições
 
-### Distribuição uniforme
-Como o nome diz, as probabilidades são distribuídas uniformemente entre todos os possíveis resultados.<br>
-Quando jogamos um dado, assumimos que todas as faces tem a mesma probabilidade. <br><br>
---
-
-```{r echo=F, fig.height = 4, fig.align="center"}
-data.frame(face = c(1,2,3,4,5,6), prob = rep(1/6, 6)) %>% 
-  ggplot(aes(as.factor(face), prob)) + geom_bar(stat="identity", width = 0.99) + 
-  labs(title = "Probabilidade de cada face de um dado", x = "face")
-```
-
-
----
-# Distribuições
-
-### Distribuição normal
-A distribuição das probabilidades é mais concentrada no centro.<br>
-Quando consideramos a soma de dois dados, a distribuição _tende_ a ser normal. <br>
-Quanto mais vezes jogarmos os dados, estaremos mais próximos de uma distribuição normal teórica. <br><br>
---
-```{r echo=F, fig.height=4, fig.align="center"}
-ggplot(data.frame(x = c(2, 12)), aes(x = x)) +
-        stat_function(fun = dnorm, args = list(7, 2)) +
-  scale_x_discrete(limits=c(2,3,4,5,6,7,8,9,10,11,12)) +
-  labs(title =  "Distribuição normal teórica")
-```
----
-# Distribuições
-
-Vamos simular 10 lançamentos
-```{r fig.height=5, fig.align="center"}
-dado1 <- floor(runif(10, 1, 7))
-dado2 <- floor(runif(10, 1, 7))
-hist(dado1+dado2)
-```
----
-# Distribuições
-
-100 lançamentos:
-```{r fig.height=5, fig.align="center"}
-dado1 <- floor(runif(100, 1, 7))
-dado2 <- floor(runif(100, 1, 7))
-hist(dado1+dado2)
-```
-
----
-# Distribuições
-
-10.000 lançamentos:
-```{r fig.height=5, fig.align="center"}
-dado1 <- floor(runif(10000, 1, 7))
-dado2 <- floor(runif(10000, 1, 7))
-hist(dado1+dado2)
-```
-
----
-# Distribuições
-
-Entender a distribuição dos dados ajuda a avaliar questões que surgem na análise dos dados:
-  
-- Frequência com que os valores (ou intervalos de valores) estão distribuídos
-- Valores mais comuns, mínimos, máximos
-- Variabilidade
-- Valores discrepantes
-- Simetria
-
---
-
-Ferramentas importantes:
-  
-- Gráficos
-- Tabelas
-- Medidas resumo (média, mediana...)
----
 class: inverse
 ### Exemplo bom: lidando com distribuição
 [O seu salário diante da realidade brasileira](https://www.nexojornal.com.br/interativo/2016/01/11/O-seu-sal%C3%A1rio-diante-da-realidade-brasileira)
@@ -426,4 +316,4 @@ class: inverse, middle, center
 
 **Maria Marinho**
 
-`r anicon::faa("github", animate="vertical")`Github: [MaryMS](https://github.com/MaryMS)
+`r anicon::faa("at", animate="vertical")`Email: mariamarinhos@gmail.com ou `r anicon::faa("github", animate="vertical")`Github: [MaryMS](https://github.com/MaryMS)
