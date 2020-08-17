@@ -41,8 +41,8 @@ knitr::include_graphics("imgs/maria_marinho.jpg")
 .pull-right[
 **Maria Marinho** é formada em Processamento de Dados, bacharela e licenciada em Matemática com ênfase em Informática, pós graduada em Educação Matemática. Atuou na área de TI como Desenvolvedora de Sistemas e atualmente é Cientista de Dados na SulAmérica. Faz parte das comunidades R-Ladies e PyLadies São Paulo.
 
-`r anicon::faa("at", animate="vertical")`Email: mariamarinhos@gmail.com
-`r anicon::faa("github", animate="float")`Github: [MaryMS](https://github.com/MaryMS)
+`r anicon::faa("at", animate="float")`Email: mariamarinhos@gmail.com  
+`r anicon::faa("github", animate="vertical")`Github: [MaryMS](https://github.com/MaryMS)
 ]
 
 ---
@@ -73,9 +73,8 @@ background-size: contain
 - Ajuda a escrever de forma mais clara
 
 ---
-background-image: url(imgs/covid_jpeg)
-
-# Por que é importante?
+background-image: url(imgs/covid.jpeg)
+background-size: contain
 
 ---
 class: inverse
@@ -88,7 +87,7 @@ background-image: url(imgs/media_movel.png)
 
 ### O que significa média?
 
---
+
 pessoa média?  
 salário médio?  
   
@@ -110,7 +109,7 @@ salário médio?
 
 **Média móvel**: Média utilizada em séries temporais que considera uma janela "móvel" para fazer o cálculo. 
 
-```{r echo = FALSE}
+```{r echo = FALSE, fig.width = 8, fig.height = 5}
 da <- data.table::fread("dados/covid_uf.csv")
 da %>% 
   filter(state == "SP", date >= "2020-06-01") %>% 
@@ -126,7 +125,6 @@ da %>%
 
 ```
 
-
 ---
 
 
@@ -137,22 +135,6 @@ background-size: contain
 
 background-image: url(imgs/mean2.jpg)
 background-size: contain
-
----
-
-# Média, mediana e moda
-
-```{r echo=F, fig.height = 5}
-notas <- c(4.25,0,6.75,2.75,3.25,3.25,4,7.25,1.5,2.25,0.5,1.75,0.5,0,3.5,0,7.5,5.25,1.75,1.5,2.5,3.25,6.75,6,6.5,5,2,2.5,2.75,6.75,8,3,8.5,1.5,9,3.25,2,5.75,3,3)
-table(notas) %>% as.data.frame()
-```
----
-```{r echo = F}
-hist(notas)
-cat("Média = ", mean(notas))
-cat("Mediana = ", median(notas))
-cat("Moda = ", names(sort(table(notas), T)[1]))
-```
 
 ---
 background-image: url(imgs/median.png)
@@ -169,67 +151,78 @@ background-size: contain
 background-image: url(imgs/mode2.png)
 background-size: contain
 ---
-
+background-image: url(imgs/prop.png)
+background-size: contain
 
 # Porcentagens e taxas
 
+---
+# Porcentagens e taxas
+
 - Comparação de quantidades
---
-
 - Crescimento ao longo do tempo
---
+- Porcentagem $\neq$ pontos percentuais
 
-- Aumento de 10% $\neq$ aumento de 10 pontos percentuais
 --
 
 <br><br>
-A diferença entre percentual e ponto percentual é confusa quando a quantidade que estamos medindo em si é uma porcentagem.
+A diferença entre porcentagem e ponto percentual é confusa quando a quantidade que estamos medindo em si é uma porcentagem.
 
 Por exemplo: **_Aprovação de Bolsonaro caiu de 52% para 36%_**
 
-- A diferença é de 16 pontos percentuais ( 52 - 36 = 16 )
-- Mas a diminuição é de 30,8% ( (52 - 36)/52 )
+- A diferença é de 16 pontos percentuais $(52 - 36 = 16)$
+- Mas a diminuição é de 30,8%, pois $\frac{52-36}{52} = 0,308$
 
 ---
-
-# Tipos de Dados
-
 background-image: url(imgs/tipos_dados.jpg)
 background-size: contain
+
+# Tipos de Dados
 
 ---
 # Tipos de Gráficos
 
+
 ---
-
 class: inverse
-### Exemplo bom: lidando com distribuição
-[O seu salário diante da realidade brasileira](https://www.nexojornal.com.br/interativo/2016/01/11/O-seu-sal%C3%A1rio-diante-da-realidade-brasileira)
---
-<img src="imgs/nexo.png" style=" display: block; margin-left: auto; margin-right: auto;"></img>
+### Lidando com distribuições
 
---
+[O seu salário diante da realidade brasileira](https://www.nexojornal.com.br/interativo/2016/01/11/O-seu-sal%C3%A1rio-diante-da-realidade-brasileira)
+
+<img src="imgs/nexo.png" style=" display: block; margin-left: auto; margin-right: auto;"></img>
 
 - Dá ideia da distribuição de salários
 - Compara valores individuais, e não valores resumidos (média)
 ---
 class: inverse
-### Exemplo confuso: comparando números em escalas diferentes
+### Evitar confusão: comparando números em escalas diferentes
 
 #### Em cinco dias, PM mata na Grande SP mais do que a média diária no estado
 <img src="imgs/uol-pm.png" height="500" style=" display: block; margin-left: auto; margin-right: auto;"></img>
 
 ---
 class: inverse
-### Exemplo confuso: comparando números em escalas diferentes
+### Evitar confusão: comparando números em escalas diferentes
 #### Em cinco dias, PM mata na Grande SP mais do que a média diária no estado
 
 - No título, dá a impressão de estar comparando a soma de mortes de 5 dias (16) com a média diária (2 por dia)
 - Comparação da média de 5 dias com a média de um trimestre
-- Populações diferentes
+- Populações diferentes (Grande SP vs. estado de SP)
 
+--
+
+**Gráficos ajudam!**
 
 ```{r fig.height=4, fig.align="center", echo=F}
+da <- tibble::tibble(
+  data = as.Date(c("2018-01-01", "2018-02-01", "2018-03-01", "2019-01-01", "2019-02-01", "2019-03-01")),
+  mortes = c(67,52,76,61,59,52)
+) %>% 
+  dplyr::mutate(
+    ano = lubridate::year(data),
+    mes = lubridate::month(data)
+  )
+
 data.frame(ano=c(rep(2019,3), rep(2018,3)), mes=rep(c("jan", "fev", "mar"),2),
            mortes = c(67,52,76,61,59,52)) %>% 
   ggplot(aes(x=mes, y=mortes, fill=as.factor(ano), color=as.factor(ano), group=as.factor(ano))) + geom_line() +
@@ -245,14 +238,14 @@ data.frame(ano=c(rep(2019,3), rep(2018,3)), mes=rep(c("jan", "fev", "mar"),2),
 
 #### Amostra: subconjunto de uma população
 #### População: basicamente todo mundo
-
- Conclusões a partir da amostra extrapoladas à população
+  
+Conclusões a partir da amostra extrapoladas à população - incerteza
 .center[![](imgs/inferencia.png)]
 
 
 ---
 
-# Causalidade e falácia ecológica
+# Armadilhas com dados
 
 ## Causalidade?
 --

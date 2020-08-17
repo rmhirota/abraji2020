@@ -48,8 +48,8 @@ class: center, middle, inverse, title-slide
 .pull-right[
 **Maria Marinho** é formada em Processamento de Dados, bacharela e licenciada em Matemática com ênfase em Informática, pós graduada em Educação Matemática. Atuou na área de TI como Desenvolvedora de Sistemas e atualmente é Cientista de Dados na SulAmérica. Faz parte das comunidades R-Ladies e PyLadies São Paulo.
 
-<span>&lt;i class="fas  fa-at faa-vertical animated "&gt;&lt;/i&gt;</span>Email: mariamarinhos@gmail.com
-<span>&lt;i class="fab  fa-github faa-float animated "&gt;&lt;/i&gt;</span>Github: [MaryMS](https://github.com/MaryMS)
+<span>&lt;i class="fas  fa-at faa-float animated "&gt;&lt;/i&gt;</span>Email: mariamarinhos@gmail.com  
+<span>&lt;i class="fab  fa-github faa-vertical animated "&gt;&lt;/i&gt;</span>Github: [MaryMS](https://github.com/MaryMS)
 ]
 
 ---
@@ -80,9 +80,8 @@ background-size: contain
 - Ajuda a escrever de forma mais clara
 
 ---
-background-image: url(imgs/covid_jpeg)
-
-# Por que é importante?
+background-image: url(imgs/covid.jpeg)
+background-size: contain
 
 ---
 class: inverse
@@ -95,7 +94,7 @@ background-image: url(imgs/media_movel.png)
 
 ### O que significa média?
 
---
+
 pessoa média?  
 salário médio?  
   
@@ -128,7 +127,6 @@ salário médio?
 
 ![](index_files/figure-html/unnamed-chunk-3-1.png)&lt;!-- --&gt;
 
-
 ---
 
 
@@ -139,53 +137,6 @@ background-size: contain
 
 background-image: url(imgs/mean2.jpg)
 background-size: contain
-
----
-
-# Média, mediana e moda
-
-
-```
-##    notas Freq
-## 1      0    3
-## 2    0.5    2
-## 3    1.5    3
-## 4   1.75    2
-## 5      2    2
-## 6   2.25    1
-## 7    2.5    2
-## 8   2.75    2
-## 9      3    3
-## 10  3.25    4
-## 11   3.5    1
-## 12     4    1
-## 13  4.25    1
-## 14     5    1
-## 15  5.25    1
-## 16  5.75    1
-## 17     6    1
-## 18   6.5    1
-## 19  6.75    3
-## 20  7.25    1
-## 21   7.5    1
-## 22     8    1
-## 23   8.5    1
-## 24     9    1
-```
----
-![](index_files/figure-html/unnamed-chunk-5-1.png)&lt;!-- --&gt;
-
-```
-## Média =  3.7125
-```
-
-```
-## Mediana =  3.125
-```
-
-```
-## Moda =  3.25
-```
 
 ---
 background-image: url(imgs/median.png)
@@ -202,149 +153,36 @@ background-size: contain
 background-image: url(imgs/mode2.png)
 background-size: contain
 ---
-
+background-image: url(imgs/prop.png)
+background-size: contain
 
 # Porcentagens e taxas
 
+---
+# Porcentagens e taxas
+
 - Comparação de quantidades
---
-
 - Crescimento ao longo do tempo
---
+- Porcentagem `\(\neq\)` pontos percentuais
 
-- Aumento de 10% `\(\neq\)` aumento de 10 pontos percentuais
 --
 
 &lt;br&gt;&lt;br&gt;
-A diferença entre percentual e ponto percentual é confusa quando a quantidade que estamos medindo em si é uma porcentagem.
+A diferença entre porcentagem e ponto percentual é confusa quando a quantidade que estamos medindo em si é uma porcentagem.
 
 Por exemplo: **_Aprovação de Bolsonaro caiu de 52% para 36%_**
 
-- A diferença é de 16 pontos percentuais ( 52 - 36 = 16 )
-- Mas a diminuição é de 30,8% ( (52 - 36)/52 )
+- A diferença é de 16 pontos percentuais `\((52 - 36 = 16)\)`
+- Mas a diminuição é de 30,8%, pois `\(\frac{52-36}{52} = 0,308\)`
 
 ---
-
-# Tipos de Dados
-
 background-image: url(imgs/tipos_dados.jpg)
 background-size: contain
 
+# Tipos de Dados
+
 ---
 # Tipos de Gráficos
-
----
-
-class: inverse
-### Exemplo bom: lidando com distribuição
-[O seu salário diante da realidade brasileira](https://www.nexojornal.com.br/interativo/2016/01/11/O-seu-sal%C3%A1rio-diante-da-realidade-brasileira)
---
-&lt;img src="imgs/nexo.png" style=" display: block; margin-left: auto; margin-right: auto;"&gt;&lt;/img&gt;
-
---
-
-- Dá ideia da distribuição de salários
-- Compara valores individuais, e não valores resumidos (média)
----
-class: inverse
-### Exemplo confuso: comparando números em escalas diferentes
-
-#### Em cinco dias, PM mata na Grande SP mais do que a média diária no estado
-&lt;img src="imgs/uol-pm.png" height="500" style=" display: block; margin-left: auto; margin-right: auto;"&gt;&lt;/img&gt;
-
----
-class: inverse
-### Exemplo confuso: comparando números em escalas diferentes
-#### Em cinco dias, PM mata na Grande SP mais do que a média diária no estado
-
-- No título, dá a impressão de estar comparando a soma de mortes de 5 dias (16) com a média diária (2 por dia)
-- Comparação da média de 5 dias com a média de um trimestre
-- Populações diferentes
-
-
-&lt;img src="index_files/figure-html/unnamed-chunk-6-1.png" style="display: block; margin: auto;" /&gt;
-
----
-# Inferência: população e amostra
-.center[![](imgs/sopa.jpg)]
-
----
-# Inferência: população e amostra
-
-#### Amostra: subconjunto de uma população
-#### População: basicamente todo mundo
-
- Conclusões a partir da amostra extrapoladas à população
-.center[![](imgs/inferencia.png)]
-
-
----
-
-# Causalidade e falácia ecológica
-
-## Causalidade?
---
-
-- É muito fácil chegar a conclusões não necessariamente verdadeiras
---
-
--- Causalidade: se duas coisas estão relacionadas, uma influencia a outra? Causa e efeito?
-
----
-## Causalidade?
-
-&lt;img src="imgs/correl.png" style="width: 98%" /&gt;&lt;br&gt;
-Mais aqui: [Spurrious Correltions](http://tylervigen.com/spurious-correlations)
-
----
-class: inverse
-## Causalidade?
-
-Nem sempre é tão óbvio. Na vida real, é _muito_ mais sutil.
-
-.center[![](imgs/voto-violencia.png)]
-
----
-class: inverse
-## Causalidade?
-
-.center[![](imgs/regiao-violencia.png)]
-
-Ótima discussão exatamente sobre isso [aqui](https://twitter.com/guilhermejd1/status/1163455886175690752)
-
----
-## Falácia ecológica: conclusões sobre indivíduos a partir de grupos
-
-
-&lt;iframe width="760" height="415" src="https://www.youtube.com/embed/RmYIpnzbQtM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
-
----
-class: inverse, center
-## Última curiosidade para te convencer a &lt;br&gt;olhar os dados
-
-&lt;img src="imgs/ascombe.png" style="width: 85%" /&gt;&lt;br&gt;
-Quarteto de Ascombe
-
----
-
-# Referências
-- [Khan Academy - Estatística e Probabilidade](https://pt.khanacademy.org/math/statistics-probability)
-- [Curso STAT 414, da Penn State](https://onlinecourses.science.psu.edu/stat414/)
-- [The Curious Journalist's Guide to Data, Jonathan Stray](https://towcenter.gitbooks.io/curious-journalist-s-guide-to-data/)
-- [Statistics every writer should know](https://www.robertniles.com/stats/)
-
----
-class: inverse, middle, center
-
-# Obrigada!
-
-**Renata Hirota**
-
-<span>&lt;i class="fab  fa-github faa-vertical animated "&gt;&lt;/i&gt;</span>Github: [rmhirota](https://github.com/rmhirota) ou <span>&lt;i class="fab  fa-twitter faa-float animated "&gt;&lt;/i&gt;</span>Twitter: [@renata_mh](https://twitter.com/renata_mh)
-
-**Maria Marinho**
-
-<span>&lt;i class="fas  fa-at faa-vertical animated "&gt;&lt;/i&gt;</span>Email: mariamarinhos@gmail.com ou <span>&lt;i class="fab  fa-github faa-vertical animated "&gt;&lt;/i&gt;</span>Github: [MaryMS](https://github.com/MaryMS)
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
