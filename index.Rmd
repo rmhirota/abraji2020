@@ -358,6 +358,11 @@ A maioria das pessoas concordará que "Supplier B", representado em azul médio 
 
 
 ---
+# Gráfico de Pizza, não!
+
+<img src="imgs/alternativa_pizza.jpg" style="width: 98%" /><br>
+
+---
 # Extra: Ferramentas para criação de gráficos
 <img src="imgs/Python_R_logo.jpg" style="width: 98%" /><br>
 
