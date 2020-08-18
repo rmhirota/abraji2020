@@ -53,8 +53,41 @@ class: center, middle, inverse, title-slide
 ]
 
 ---
+# R-Ladies
 
-# Estatística básica
+## O que é?
+
+R-Ladies é uma organização mundial que promove a diversidade de gênero na comunidade da linguagem R.
+
+## Como?
+
+Através de meetups e mentorias em um ambiente seguro e amigável.
+
+Nosso principal objetivo é promover a linguagem computacional estatística R compartilhando conhecimento, assim, quem tiver interesse na linguagem será bem-vinda, independente do nível de conhecimento.
+
+---
+# R-Ladies
+
+## Para quem?
+
+Nosso principal público-alvo são as pessoas que se identificam com o gênero feminino, portanto, mulheres cis, mulheres trans, bem como pessoas não-binárias e queer.
+
+## Missão
+
+Como uma iniciativa de diversidade, a missão das R-Ladies é alcançar uma representação proporcional de pessoas de gêneros atualmente sub-representados na comunidade R, incentivando, inspirando e capacitando-as.
+
+  
+  
+[About us - R-Ladies](https://rladies.org/about-us/)  
+[Meetup R-Ladies São Paulo](https://www.meetup.com/rladies-sao-paulo/)
+---
+
+background-image: url(imgs/rladies.png)
+background-size: contain
+
+---
+
+# Sobre o que vamos falar
 
 
 - Por que é importante?
@@ -64,6 +97,7 @@ class: center, middle, inverse, title-slide
 - Tipos de Gráficos
 - Inferência: população e amostra
 - Armadilhas com dados
+- Boas práticas gerais
 
 
 ---
@@ -116,16 +150,7 @@ salário médio?
 
 **Média móvel**: Média utilizada em séries temporais que considera uma janela "móvel" para fazer o cálculo. 
 
-
-```
-## Warning: Removed 6 rows containing missing values (geom_point).
-```
-
-```
-## Warning: Removed 6 row(s) containing missing values (geom_path).
-```
-
-![](index_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
+![](index_files/figure-html/unnamed-chunk-3-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -153,6 +178,7 @@ background-size: contain
 background-image: url(imgs/mode2.png)
 background-size: contain
 ---
+class: inverse
 background-image: url(imgs/prop.png)
 background-size: contain
 
@@ -173,7 +199,7 @@ A diferença entre porcentagem e ponto percentual é confusa quando a quantidade
 Por exemplo: **_Aprovação de Bolsonaro caiu de 52% para 36%_**
 
 - A diferença é de 16 pontos percentuais `\((52 - 36 = 16)\)`
-- Mas a diminuição é de 30,8%, pois `\(\frac{52-36}{52} = 0,308\)`
+- Mas a diminuição é de 30,8%, pois `\(\frac{36 - 52}{52} = -0,308\)`
 
 ---
 background-image: url(imgs/tipos_dados.jpg)
@@ -182,40 +208,181 @@ background-size: contain
 # Tipos de Dados
 
 ---
+
+background-image: url(imgs/graf_taxa_selic.jpg)
+background-size: contain
+
+# Gráficos
+
+Gráficos são representações visuais que têm como objetivo a apresentação dos dados, sejam eles categóricos ou numéricos. Eles facilitam a visualização e análise de dados.
+
+---
+
 # Tipos de Gráficos
 
+- Barras
+- Linhas
+- Dispersão
+- Histograma
+- Boxplot
+- Pizza, não!
+
+É importante escolher o gráfico adequado ao público e ao dado que será visualizado.
 
 ---
-class: inverse
-### Lidando com distribuições
 
-[O seu salário diante da realidade brasileira](https://www.nexojornal.com.br/interativo/2016/01/11/O-seu-sal%C3%A1rio-diante-da-realidade-brasileira)
+background-image: url(imgs/graf_obitos_covid.jpg)
+background-size: contain
 
-&lt;img src="imgs/nexo.png" style=" display: block; margin-left: auto; margin-right: auto;"&gt;&lt;/img&gt;
+# Gráfico de Barras (ou colunas)
 
-- Dá ideia da distribuição de salários
-- Compara valores individuais, e não valores resumidos (média)
----
-class: inverse
-### Evitar confusão: comparando números em escalas diferentes
+É utilizado para resumir um conjunto de dados categóricos, comparando quantidades ou demostrando valores pontuais de um determinado período.
 
-#### Em cinco dias, PM mata na Grande SP mais do que a média diária no estado
-&lt;img src="imgs/uol-pm.png" height="500" style=" display: block; margin-left: auto; margin-right: auto;"&gt;&lt;/img&gt;
+- Ele mostra os dados utilizando um número de barras de mesmo tamanho. O que as diferenciam são suas alturas que representam as frequências das categorias.
+
+- O eixo x mostra os valores da variável e o eixo y, as respectivas frequências.
+
+- Pode ser representado na vertical ou na horizontal.
 
 ---
-class: inverse
-### Evitar confusão: comparando números em escalas diferentes
-#### Em cinco dias, PM mata na Grande SP mais do que a média diária no estado
 
-- No título, dá a impressão de estar comparando a soma de mortes de 5 dias (16) com a média diária (2 por dia)
-- Comparação da média de 5 dias com a média de um trimestre
-- Populações diferentes (Grande SP vs. estado de SP)
+background-image: url(imgs/graf_vendas_varejo.jpg)
+background-size: contain
 
---
 
-**Gráficos ajudam!**
+# Gráfico de Barras (ou colunas)
 
-&lt;img src="index_files/figure-html/unnamed-chunk-9-1.png" style="display: block; margin: auto;" /&gt;
+---
+
+background-image: url(imgs/graf_casos_covid_worldmeters.jpg)
+background-size: contain
+
+
+# Gráfico de Linhas
+
+Ele é usado para analisar dados ao longo do tempo. É muito utilizado para representar tendências nos dados quantitativos, pois mostra o crescimento ou decrescimento de um fenômeno/processo em um determinado período (séries temporais).
+
+O eixo x representa o tempo (anos, meses, dias, etc.) e o eixo y mostra o outro dado em questão.
+
+---
+
+background-image: url(imgs/graph_covid_income.jpg)
+background-size: contain
+
+
+# Gráfico de Dispersão (ou scatterplot)
+
+É útil para analisar a relação entre duas variáveis quantitativas. Uma delas é a variável independente X (causa) e a outra, uma variável dependente Y (efeito).
+
+- O conjunto de pares ordenados forma uma nuvem de pontos.
+
+- O diagrama não prova que uma variável afeta outra variável, mas indica se existe relação e qual a intensidade da relação entre elas (positiva, negativa, nula). 
+
+---
+
+background-image: url(imgs/hist_media_enem.jpg)
+background-size: contain
+
+# Histograma
+
+Permite representar visualmente a distribuição de frequência dos dados (quantitativos contínuos).
+
+- Apresenta vários retângulos justapostos (barras verticais). Embora tenha semelhanças com o gráfico de barras, o histograma não apresenta espaço entre as colunas.
+
+- É um importante indicador para a análise da distribuição dos dados.
+
+---
+
+background-image: url(imgs/boxplot.jpg)
+background-size: contain
+
+
+# Boxplot (ou gráfico de caixa)
+
+É utilizado para avaliar a distribuição de dados quantitativos. 
+
+- Mostra as seguintes medidas estatísticas: mediana, primeiro quartil, terceiro quartil, menor valor e maior valor. 
+
+- Ajuda na visualização do centro, dispersão e assimetria dos dados analisados. 
+
+- Identifica outliers (valores extremos).
+
+- É possível realizar comparações visuais entre dois ou mais grupos.
+
+---
+
+background-image: url(imgs/boxplot_covid.jpg)
+background-size: contain
+
+
+# Boxplot (ou gráfico de caixa)
+
+---
+
+background-image: url(imgs/pizza1.jpg)
+background-size: contain
+
+
+# Gráfico de Pizza, não!
+
+É um gráfico onde os valores de cada categoria estatística representada são proporcionais às respectivas frequências.
+
+- Por que não utilizá-lo? 
+Observe o gráfico.
+
+A maioria das pessoas concordará que "Supplier B", representado em azul médio no canto inferior direito, parece ser o maior. Se você tivesse que estimar que proporção o supplier B compõe do mercado geral, qual porcentagem você estimaria? 
+
+35%? 
+
+40%?
+
+---
+background-image: url(imgs/pizza2.jpg)
+background-size: contain
+
+
+# Gráfico de Pizza, não!
+
+- O "Supplier B" - que parece o maior, com 31% - é realmente menor do que o "Supplier A" acima dele, que parece menor.
+
+- Mesmo quando retiramos o 3D e achatamos o bolo, os desafios de interpretação permanecem. 
+
+- O olho humano não é bom em atribuir valor quantitativo ao espaço bidimensional. 
+
+- Concluindo: os gráficos de pizza são difíceis de ler. 
+
+- Sugestão: substituir o gráfico de pizza por um gráfico de barra horizontal organizado do maior para o menor ou vice-versa. 
+
+
+---
+
+background-image: url(imgs/Python_R_logo)
+background-size: contain
+
+# Extra: Ferramentas para criação de gráficos
+
+- Linguagens de Programação: R (ggplot2, plotly) e Python (matplotlib, seaborn, boukeh, plotly)
+
+- Ferramenta online: [Flourish]https://flourish.studio)
+
+---
+
+# Extra: Dicas para melhor se comunicar com os dados
+ 
+1. Entenda o contexto
+2. Escolha uma apresentação visual adequada
+3. Elimine a saturação
+4. Foque a atenção onde você deseja
+5. Pense como um designer
+6. Conte uma história
+
+Essa lista e a reflexão sobre o gráfico de pizza foram retirados do livro Storytelling With Data da autora Cole Nussbaumer Knaflic.
+
+Os sites abaixo podem ajudar na escolha do gráfico mais adequado para o seu dado:
+
+- [From Data to Viz]https://www.data-to-viz.com)
+- [Data Viz Project](https://datavizproject.com)
+- [The Data Visualisation Catalogue]https://datavizcatalogue.com)
 
 ---
 # Inferência: população e amostra
@@ -232,25 +399,37 @@ Conclusões a partir da amostra extrapoladas à população - incerteza
 
 
 ---
+class: inverse, middle, center
+# Armadilhas com dados
+
+.center[![](imgs/correlation.png)]
+
+---
 
 # Armadilhas com dados
 
 ## Causalidade?
---
 
-- É muito fácil chegar a conclusões não necessariamente verdadeiras
---
-
--- Causalidade: se duas coisas estão relacionadas, uma influencia a outra? Causa e efeito?
+- É fácil chegar a conclusões não necessariamente verdadeiras
+- Causalidade: se duas coisas estão relacionadas, uma influencia a outra? Causa e efeito?
 
 ---
 ## Causalidade?
 
 &lt;img src="imgs/correl.png" style="width: 98%" /&gt;&lt;br&gt;
+
+---
+## Causalidade?
+
+&lt;img src="imgs/correl2.png" style="width: 98%" /&gt;&lt;br&gt;
+
+---
+## Causalidade?
+
+&lt;img src="imgs/correl3.png" style="width: 98%" /&gt;&lt;br&gt;
 Mais aqui: [Spurrious Correltions](http://tylervigen.com/spurious-correlations)
 
 ---
-class: inverse
 ## Causalidade?
 
 Nem sempre é tão óbvio. Na vida real, é _muito_ mais sutil.
@@ -258,12 +437,12 @@ Nem sempre é tão óbvio. Na vida real, é _muito_ mais sutil.
 .center[![](imgs/voto-violencia.png)]
 
 ---
-class: inverse
-## Causalidade?
+class: middle
 
-.center[![](imgs/regiao-violencia.png)]
-
-Ótima discussão exatamente sobre isso [aqui](https://twitter.com/guilhermejd1/status/1163455886175690752)
+_Ao ser apresentado a esses cruzamentos, o cientista político Guilherme Russo, da Fundação Getulio Vargas, resolveu aprofundar a análise com comparações apenas entre municípios de uma mesma região. Nesse exercício, Russo constatou que, considerando só o conjunto dos municípios do Norte e do Nordeste, Bolsonaro apresentou uma tendência de ir progressivamente melhor nas áreas mais violentas. "Sugere que, numa análise geral, mais macro, a questão regional foi mais importante na determinação do voto do que a da violência", afirmou._
+  
+  
+[Bolsonaro vai pior nos locais mais violentos - Valor Econômico](https://www.valor.com.br/node/5914559)
 
 ---
 ## Falácia ecológica: conclusões sobre indivíduos a partir de grupos
@@ -272,11 +451,55 @@ class: inverse
 &lt;iframe width="760" height="415" src="https://www.youtube.com/embed/RmYIpnzbQtM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
 
 ---
-class: inverse, center
-## Última curiosidade para te convencer a &lt;br&gt;olhar os dados
+class: inverse, middle, center
+
+# Algumas boas práticas
+
+---
+## **Olhe** os dados
 
 &lt;img src="imgs/ascombe.png" style="width: 85%" /&gt;&lt;br&gt;
 Quarteto de Ascombe
+
+---
+## **Olhe** os dados
+
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="en" dir="ltr"&gt;Always visualize your data! (Thanks to &lt;a href="https://twitter.com/AlbertoCairo?ref_src=twsrc%5Etfw"&gt;@albertocairo&lt;/a&gt; for the artwork 😀) &lt;a href="https://t.co/8D8sgLLqB5"&gt;pic.twitter.com/8D8sgLLqB5&lt;/a&gt;&lt;/p&gt;&amp;mdash; Justin Matejka (@JustinMatejka) &lt;a href="https://twitter.com/JustinMatejka/status/770682771656368128?ref_src=twsrc%5Etfw"&gt;August 30, 2016&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt; 
+
+
+---
+## Pense na **distribuição**
+
+[O seu salário diante da realidade brasileira](https://www.nexojornal.com.br/interativo/2016/01/11/O-seu-sal%C3%A1rio-diante-da-realidade-brasileira)
+
+&lt;img src="imgs/nexo.png" style=" display: block; margin-left: auto; margin-right: auto;"&gt;&lt;/img&gt;
+
+- Dá ideia da distribuição de salários
+- Compara valores individuais, e não valores resumidos (média)
+---
+
+## Evite confusão
+
+[Em cinco dias, PM mata na Grande SP mais do que a média diária no estado](https://noticias.uol.com.br/cotidiano/ultimas-noticias/2019/04/03/em-cinco-dias-pm-mata-na-grande-sp-mais-do-que-a-media-diaria-no-estado.htm)
+&lt;img src="imgs/uol-pm.png" height="500" style=" display: block; margin-left: auto; margin-right: auto;"&gt;&lt;/img&gt;
+  
+---
+## Evite confusão
+
+As comparações são equivalentes?
+  
+--
+
+- No título, dá a impressão de estar comparando a soma de mortes de 5 dias (16) com a média diária (2 por dia)
+- Comparação da média de 5 dias com a média de um trimestre
+- Populações diferentes (Grande SP vs. estado de SP)
+
+---
+## Evite confusão
+
+ Gráficos ajudam!
+
+&lt;img src="index_files/figure-html/unnamed-chunk-4-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -293,11 +516,13 @@ class: inverse, middle, center
 
 **Renata Hirota**
 
-<span>&lt;i class="fab  fa-github faa-vertical animated "&gt;&lt;/i&gt;</span>Github: [rmhirota](https://github.com/rmhirota) ou <span>&lt;i class="fab  fa-twitter faa-float animated "&gt;&lt;/i&gt;</span>Twitter: [@renata_mh](https://twitter.com/renata_mh)
+<span>&lt;i class="fab  fa-github faa-vertical animated "&gt;&lt;/i&gt;</span>Github: [rmhirota](https://github.com/rmhirota)&lt;br&gt;
+<span>&lt;i class="fab  fa-twitter faa-float animated "&gt;&lt;/i&gt;</span>Twitter: [@renata_mh](https://twitter.com/renata_mh)&lt;br&gt;&lt;br&gt;
 
 **Maria Marinho**
 
-<span>&lt;i class="fas  fa-at faa-vertical animated "&gt;&lt;/i&gt;</span>Email: mariamarinhos@gmail.com ou <span>&lt;i class="fab  fa-github faa-vertical animated "&gt;&lt;/i&gt;</span>Github: [MaryMS](https://github.com/MaryMS)
+<span>&lt;i class="fas  fa-at faa-vertical animated "&gt;&lt;/i&gt;</span>Email: mariamarinhos@gmail.com&lt;br&gt;
+<span>&lt;i class="fab  fa-github faa-vertical animated "&gt;&lt;/i&gt;</span>Github: [MaryMS](https://github.com/MaryMS)
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
