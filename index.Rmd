@@ -218,6 +218,9 @@ background-size: contain
 # Gráficos
 <img src="imgs/graf_taxa_selic.jpg" style="width: 98%" /><br>
 
+---
+# Gráficos
+
 Gráficos são representações visuais que têm como objetivo a apresentação dos dados, sejam eles categóricos ou numéricos. Eles facilitam a visualização e análise de dados.
 
 ---
