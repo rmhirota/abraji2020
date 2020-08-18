@@ -336,12 +336,12 @@ A maioria das pessoas concordará que "Supplier B", representado em azul médio 
 ---
 # Gráfico de Pizza, não!
 
-<img src="imgs/pizza1.jpg" style="width: 98%" /><br>
+<img src="imgs/pizza1.jpg" style="width: 80%" /><br>
 
 ---
 # Gráfico de Pizza, não!
 
-<img src="imgs/pizza2.jpg" style="width: 98%" /><br>
+<img src="imgs/pizza2.jpg" style="width: 80%" /><br>
 
 ---
 # Gráfico de Pizza, não!
@@ -360,7 +360,7 @@ A maioria das pessoas concordará que "Supplier B", representado em azul médio 
 ---
 # Gráfico de Pizza, não!
 
-<img src="imgs/alternativa_pizza.jpg" style="width: 98%" /><br>
+<img src="imgs/alternativa_pizza.jpg" style="width: 80%" /><br>
 
 ---
 # Extra: Ferramentas para criação de gráficos
