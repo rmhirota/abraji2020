@@ -86,8 +86,8 @@ background-size: contain
 - Por que é importante?
 - Média, mediana e moda
 - Porcentagem e taxas
-- Tipos de Dados
-- Tipos de Gráficos
+- Tipos de dados
+- Tipos de gráficos
 - Inferência: população e amostra
 - Armadilhas com dados
 - Boas práticas gerais
@@ -257,6 +257,10 @@ Gráficos são representações visuais que têm como objetivo a apresentação 
 <img src="imgs/graf_vendas_varejo.jpg" style="width: 98%" /><br>
 
 ---
+# Gráfico de Barras (ou colunas)
+<img src="imgs/graf_taxa_morte_covid.jpg" style="width: 98%" /><br>
+
+---
 # Gráfico de Linhas
 
 Ele é usado para analisar dados ao longo do tempo. É muito utilizado para representar tendências nos dados quantitativos, pois mostra o crescimento ou decrescimento de um fenômeno/processo em um determinado período (séries temporais).
@@ -294,7 +298,7 @@ Permite representar visualmente a distribuição de frequência dos dados (quant
 ---
 # Histograma
 
-<img src="imgs/hist_media_enem.jpg" style="width: 98%" /><br>
+<img src="imgs/histograma.jpg" style="width: 98%" /><br>
 
 ---
 # Boxplot (ou gráfico de caixa)
@@ -325,18 +329,18 @@ Permite representar visualmente a distribuição de frequência dos dados (quant
 É um gráfico onde os valores de cada categoria estatística representada são proporcionais às respectivas frequências.
 
 - Por que não utilizá-lo? 
-Observe o gráfico.
+Observe o gráfico a seguir.
+
+---
+# Gráfico de Pizza, não!
+
+<img src="imgs/pizza1.jpg" style="width: 80%" /><br>
 
 A maioria das pessoas concordará que "Supplier B", representado em azul médio no canto inferior direito, parece ser o maior. Se você tivesse que estimar que proporção o supplier B compõe do mercado geral, qual porcentagem você estimaria? 
 
 35%? 
 
 40%?
-
----
-# Gráfico de Pizza, não!
-
-<img src="imgs/pizza1.jpg" style="width: 80%" /><br>
 
 ---
 # Gráfico de Pizza, não!
@@ -371,7 +375,6 @@ A maioria das pessoas concordará que "Supplier B", representado em azul médio 
 - Ferramenta online: [Flourish](https://flourish.studio)
 
 ---
-
 # Extra: Dicas para melhor se comunicar com os dados
  
 1. Entenda o contexto
@@ -541,6 +544,7 @@ da %>%
 - [Curso STAT 414, da Penn State](https://onlinecourses.science.psu.edu/stat414/)
 - [The Curious Journalist's Guide to Data, Jonathan Stray](https://towcenter.gitbooks.io/curious-journalist-s-guide-to-data/)
 - [Statistics every writer should know](https://www.robertniles.com/stats/)
+- [Storytelling with data](http://www.storytellingwithdata.com)
 
 ---
 class: inverse, middle, center
