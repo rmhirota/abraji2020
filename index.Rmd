@@ -217,11 +217,9 @@ background-size: contain
 ---
 # Gráficos
 
-Gráficos são representações visuais que têm como objetivo a apresentação dos dados, sejam eles categóricos ou numéricos. Eles facilitam a visualização e análise de dados.
+<img src="imgs/graf_pico.jpg" style="width: 70%" /><br>
 
----
-# Gráficos
-<img src="imgs/graf_taxa_selic.jpg" style="width: 98%" /><br>
+Gráficos são representações visuais que têm como objetivo a apresentação dos dados, sejam eles categóricos ou numéricos. Eles facilitam a visualização e análise de dados.
 
 ---
 
@@ -321,7 +319,7 @@ Permite representar visualmente a distribuição de frequência dos dados (quant
 ---
 # Boxplot (ou gráfico de caixa)
 
-<img src="imgs/boxplot_covid.jpg" style="width: 98%" /><br>
+<img src="imgs/boxplot_covid.jpg" style="width: 80%" /><br>
 
 ---
 # Gráfico de Pizza, não!
@@ -364,7 +362,7 @@ A maioria das pessoas concordará que "Supplier B", representado em azul médio 
 ---
 # Gráfico de Pizza, não!
 
-<img src="imgs/alternativa_pizza.jpg" style="width: 80%" /><br>
+<img src="imgs/alternativa_pizza.jpg" style="width: 70%" /><br>
 
 ---
 # Extra: Ferramentas para criação de gráficos
